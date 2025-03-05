@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino Door Lock System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+    color: #333;
+    text-align: center;
+    display: block;
+}
+
+        pre {
+        font-size: 23px;
+            background-color: #282c34;
+            color: #ffffff;
+            padding: 15px;
+            border-radius: 8px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+    
+ 
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino Door Lock System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+
+        .header-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            padding: 20px 0;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .main-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            transition: font-size 0.3s ease;
+        }
+
+        .khmer-title {
+            font-size: 1.5rem;
+            color: #34495e;
+            margin-bottom: 8px;
+            font-weight: 400;
+        }
+
+        .prepared-by {
+            font-size: 1rem;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        /* Scrolled State */
+        .header-container.scrolled {
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container.scrolled .header-content {
+            flex-direction: row;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .header-container.scrolled .main-title {
+            font-size: 1.5rem;
+            margin-bottom: 0;
+        }
+
+        .header-container.scrolled .khmer-title,
+        .header-container.scrolled .prepared-by {
+            display: none;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 200px auto 20px;
+            padding: 0 20px;
+        }
+
+        .video-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .video-wrapper {
+            width: calc(50% - 20px);
+            max-width: 650px;
+            background-color: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: all var(--transition-speed) ease;
+            transform-origin: center;
+        }
+
+        .video-wrapper:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform var(--transition-speed) ease;
+        }
+
+        .video-overlay {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-overlay::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                to bottom, 
+                rgba(0, 0, 0, 0) 0%, 
+                rgba(0, 0, 0, 0.2) 100%
+            );
+            opacity: 0;
+            transition: opacity var(--transition-speed) ease;
+        }
+
+        .video-wrapper:hover .video-overlay::before {
+            opacity: 1;
+        }
+
+        .video-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 15px;
+            color: white;
+            transform: translateY(100%);
+            transition: transform var(--transition-speed) ease;
+            background: linear-gradient(
+                to bottom, 
+                transparent, 
+                rgba(0, 0, 0, 0.7)
+            );
+            opacity: 0;
+        }
+
+        .video-wrapper:hover .video-info {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        @media (max-width: 1024px) {
+            .video-wrapper {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .video-gallery {
+                padding: 20px 10px;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Arduino Door Lock System Code</h1>
+        <h1>បង្រៀនដោយសាស្ត្រាចារ្យ​ ញឹម ស្រស់
+        </h1>
+        <h1>Prepared by: និស្សិត៖  វ៉ាន់ វីរៈបុត្រ, អ៊ិន រដ្ឋា, សយ សក្កដា
+            </h1>
+        </h1>
+        <pre>
+/*Door lock system with Arduino Nano
+   Home Page
+*/
+
+#include &lt;Servo.h&gt;
+#include &lt;LiquidCrystal_I2C.h&gt;
+#include &lt;SPI.h&gt;
+#include &lt;MFRC522.h&gt;
+
+#define SS_PIN 10
+#define RST_PIN 9
+#define buzzer 2
+#define servoPin 3
+
+String UID = "*************";//Enter your card ID
+byte lock = 0;
+
+Servo servo;
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+MFRC522 rfid(SS_PIN, RST_PIN);
+
+void setup() {
+  Serial.begin(9600);
+  servo.write(70);
+  lcd.init();
+  lcd.backlight();
+  servo.attach(servoPin);
+  SPI.begin();
+  rfid.PCD_Init();
+  pinMode(buzzer, OUTPUT);
+}
+
+void loop() {
+  lcd.setCursor(4, 0);
+  lcd.print("Welcome!");
+  lcd.setCursor(1, 1);
+  lcd.print("Put your card");
+
+  if ( ! rfid.PICC_IsNewCardPresent())
+    return;
+  if ( ! rfid.PICC_ReadCardSerial())
+    return;
+
+  lcd.clear();
+  lcd.setCursor(0, 0);
+  lcd.print("Scanning");
+  Serial.print("NUID tag is :");
+  String ID = "";
+  for (byte i = 0; i < rfid.uid.size; i++) {
+    lcd.print(".");
+    ID.concat(String(rfid.uid.uidByte[i] < 0x10 ? " 0" : " "));
+    ID.concat(String(rfid.uid.uidByte[i], HEX));
+    delay(300);
+  }
+  ID.toUpperCase();
+
+  if (ID.substring(1) == UID && lock == 0 ) {
+    digitalWrite(buzzer, HIGH);
+    delay(300);
+    digitalWrite(buzzer, LOW);
+    servo.write(50);
+    delay(100);
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    lcd.print("Locked");
+    delay(1500);
+    lcd.clear();
+    lock = 1;
+  } else if (ID.substring(1) == UID && lock == 1 ) {
+    digitalWrite(buzzer, HIGH);
+    delay(300);
+    digitalWrite(buzzer, LOW);
+    servo.write(110);
+    delay(100);
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    lcd.print("Unlocked");
+    delay(1500);
+    lcd.clear();
+    lock = 0;
+  } else {
+    lcd.clear();
+    lcd.setCursor(0, 0);
+    lcd.print("Wrong card!");
+    digitalWrite(buzzer, HIGH);
+    delay(200);
+    digitalWrite(buzzer, LOW);
+    delay(200);
+    digitalWrite(buzzer, HIGH);
+    delay(200);
+    digitalWrite(buzzer, LOW);
+    delay(200);
+    digitalWrite(buzzer, HIGH);
+    delay(200);
+    digitalWrite(buzzer, LOW);
+    delay(200);
+    delay(1500);
+    lcd.clear();
+  }
+}
+
+        </pre>
+
+        <h1>Arduino Door Lock System Code</h1>
+
+        <h1>Prepared by: និស្សិត៖  វ៉ាន់ វីរៈបុត្រ, អ៊ិន រដ្ឋា, សយ សក្កដា
+            </h1>
+        </h1>
+        <div class="video-gallery">
+            <div class="video-wrapper">
+                <div class="video-overlay">
+                    <video controls>
+                        <source src="IMG_1737.MP4" type="video/mp4">
+              
+                    </video>
+                    <div class="video-info">
+                        <h3>Project 1</h3>
+                        <p>Arduino Door Lock System Code</p>
+                    </div>
+                </div>
+            </div>
+    
+
+        </div>
+    </div>
+</body>
+</html>
